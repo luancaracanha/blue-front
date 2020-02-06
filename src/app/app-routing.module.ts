@@ -11,15 +11,7 @@ const routes: Routes = [
     path: 'votos',
     loadChildren: () => import('./votos/votos.module').then(m => m.VotosModule)
   },
-  // {
-  //   path: '**',
-  //   redirectTo: '/home'
-  // },
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  }
+  { path: '**', redirectTo: '/home' }
 ];
 
 @NgModule({
