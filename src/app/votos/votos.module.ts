@@ -2,9 +2,11 @@ import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {PanelModule} from 'primeng/panel';
-import { VotosComponent } from './votos.component';
+import { VotosComponent } from './view/votos.component';
 import { RouterModule } from '@angular/router';
 import { VotosRoutingModule } from './votos.routing';
+import {ChartModule} from 'primeng/chart';
+import {RelatorioComponent} from './relatorio/relatorio.component';
 
 @NgModule({
   imports: [
@@ -12,9 +14,10 @@ import { VotosRoutingModule } from './votos.routing';
     CommonModule,
     FormsModule,
     VotosRoutingModule,
-    PanelModule
+    PanelModule,
+    ChartModule
   ],
-  declarations: [VotosComponent],
-  exports: [VotosComponent]
+  declarations: [VotosComponent, RelatorioComponent],
+  exports: [VotosComponent, RelatorioComponent]
 })
 export class VotosModule {}

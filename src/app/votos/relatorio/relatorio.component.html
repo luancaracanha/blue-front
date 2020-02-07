@@ -1,0 +1,20 @@
+<p-panel header="Relatórios">
+  <div class="ui-fluid">
+    <div class="ui-g">
+      <div class="ui-g-12 ui-md-6">
+        <p-chart type="pie" [data]="data" [options]="options"></p-chart>
+      </div>
+
+      <div class="ui-g-12 ui-md-6">
+        <div class="mp"><b>Usuário X Empreendimento</b></div>
+        <div class="ui-g-12 ui-md-6 border-c"> Usuário </div>
+        <div class="ui-g-12 ui-md-6 border-c"> Empreendimento </div>
+        <div *ngFor="let votacao of votacoes">
+          <div class="ui-g-12 ui-md-6 border"> {{votacao.usuario.nome}} </div>
+          <div class="ui-g-12 ui-md-6 border"> {{votacao.empreendimento.nome}} </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</p-panel>

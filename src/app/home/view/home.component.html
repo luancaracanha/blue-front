@@ -1,13 +1,21 @@
 <p-panel header="Home">
-  <div *ngFor="let empreendimento of empreendimentos" class="card">
-    <p-card header="{{empreendimento.nome}}" subheader="{{empreendimento.endereco}}" styleClass="ui-card-shadow" [style]="{'width':'70%','max-width':'600px'}">
-      <p-header>
-        <img src="Card" src="{{empreendimento.imagemUrl}}">
-      </p-header>
-      <div>{{empreendimento.descricao}}</div>
-      <p-footer>
-        <button pButton type="button" label="Votar" icon="pi pi-check" style="margin-right: .25em" (click)="votar(empreendimento)"></button>
-      </p-footer>
-    </p-card>
+  <div class="ui-fluid">
+    <div class="ui-g">
+
+      <div *ngFor="let empreendimento of empreendimentos" class="card">
+        <p-card header="{{empreendimento.nome}}" subheader="{{empreendimento.endereco}}" styleClass="ui-card-shadow"
+                [style]="{'width':'70%','max-width':'600px'}">
+          <p-header>
+            <img src="Card" src="{{empreendimento.imagemUrl}}">
+          </p-header>
+          <div>{{empreendimento.descricao}}</div>
+          <p-footer>
+            <button pButton type="button" label="Votar" icon="pi pi-check" style="margin-right: .25em"
+                    (click)="votar(empreendimento)"></button>
+          </p-footer>
+        </p-card>
+      </div>
+
+    </div>
   </div>
 </p-panel>

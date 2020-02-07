@@ -1,0 +1,38 @@
+<div class="ui-fluid">
+  <div class="ui-g">
+
+    <p-dialog header="Cadastro" [(visible)]="dialogCadastro" [transitionOptions]="'10ms'" [modal]="true">
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-12 ui-md-6">
+          <span class="ui-float-label">
+            <input id="nomeCadastro" type="text" size="30" pInputText [(ngModel)]="usuario.nome">
+            <label for="nomeCadastro">Nome</label>
+          </span>
+        </div>
+        <div class="ui-g-12 ui-md-6">
+          <span class="ui-float-label">
+          <input id="emailCadastro" type="text" size="30" pInputText [(ngModel)]="usuario.email">
+          <label for="emailCadastro">E-mail</label>
+          </span>
+        </div>
+        <div class="ui-g-12 ui-md-6">
+          <span class="ui-float-label">
+          <input id="senhaCadastro" type="password" size="30" pInputText [(ngModel)]="usuario.senha">
+          <label for="senhaCadastro">Senha</label>
+          </span>
+        </div>
+        <div class="ui-g-12 ui-md-6">
+          <span class="ui-float-label">
+            <input id="confirmaSenha" type="password" size="30" pInputText [(ngModel)]="confirmaSenha">
+            <label for="confirmaSenha">Confirmar senha</label>
+          </span>
+        </div>
+      </div>
+
+      <p-footer>
+        <button pButton icon="pi pi-check" (click)="salvarCadastro()" label="Salvar" class="ui-button-success"></button>
+      </p-footer>
+    </p-dialog>
+
+  </div>
+</div>

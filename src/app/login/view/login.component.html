@@ -1,0 +1,24 @@
+<div class="ui-fluid">
+  <div class="ui-g">
+    <p-dialog header="Login" [(visible)]="dialogLogin" [transitionOptions]="'10ms'" [modal]="true">
+      <div class="ui-g-12 ui-md-12">
+        <div class="ui-g-12 ui-md-12">
+          <span class="ui-float-label">
+            <input id="email" type="text" size="35" pInputText [(ngModel)]="autenticar.email">
+            <label for="email">E-mail</label>
+          </span>
+        </div>
+        <div class="ui-g-12 ui-md-12">
+          <span class="ui-float-label">
+            <input id="senha" type="password" size="35" pInputText [(ngModel)]="autenticar.senha">
+            <label for="senha">Senha</label>
+          </span>
+        </div>
+      </div>
+
+      <p-footer>
+        <button pButton icon="pi pi-check" (click)="logar()" label="Logar" class="ui-button-success"></button>
+      </p-footer>
+    </p-dialog>
+  </div>
+</div>
