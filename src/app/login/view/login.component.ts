@@ -19,7 +19,12 @@ export class LoginComponent implements OnInit {
     private usuarioService: UsuarioService,
     private utilService: UtilService
   ) {
-    UtilService.abreLogin.subscribe(value => this.dialogLogin = value);
+    UtilService.abreLogin.subscribe(
+      value => {
+        this.autenticar = new Autenticar();
+        this.dialogLogin = value;
+      }
+    );
   }
 
   ngOnInit() {}
